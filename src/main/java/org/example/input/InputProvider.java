@@ -2,6 +2,7 @@ package org.example.input;
 
 import org.example.output.ConsolePrinter;
 
+import java.util.InputMismatchException;
 import java.util.LinkedHashSet;
 import java.util.Scanner;
 import java.util.Set;
@@ -13,21 +14,21 @@ public class InputProvider {
 
     public Set<Integer> getUserNumbers(Scanner scanner, ConsolePrinter consolePrinter) {
         Set<Integer> userNumbers = new LinkedHashSet<>();
-        consolePrinter.printLine(String.format(PROVIDE_NUMBERS, LOTTO_NR_COUNT));
+        consolePrinter.printLine(String.format(PROVIDE_NUMBERS, LOTTO_NR_COUNT, LOWER_BOUND, UPPER_BOUND));
         while (userNumbers.size() < LOTTO_NR_COUNT) {
-            consolePrinter.printLine(String.format(READ_NUMER, userNumbers.size() + 1));
-            int userNumber = getUserNumber(scanner);
-            validateNumber(consolePrinter, userNumber, userNumbers);
+            getValidatedUserNumber(scanner, consolePrinter, userNumbers);
         }
         scanner.close();
         return userNumbers;
     }
 
-    private int getUserNumber(Scanner scanner) {
+    private void getValidatedUserNumber(Scanner scanner, ConsolePrinter consolePrinter, Set<Integer> userNumbers) {
+        consolePrinter.printLine(String.format(READ_NUMER, userNumbers.size() + 1));
         try {
-            return scanner.nextInt();
-        } finally {
-            scanner.nextLine();
+            int userNumber = getInt(scanner);
+            validateNumber(consolePrinter, userNumber, userNumbers);
+        } catch (InputMismatchException e) {
+            consolePrinter.printLine(EXCEPITON_INFO);
         }
     }
 
@@ -36,6 +37,13 @@ public class InputProvider {
             userNumbers.add(userNumber);
         } else {
             consolePrinter.printLine(String.format(INVALID_NUMBER, LOWER_BOUND, UPPER_BOUND));
+        }
+    }
+    private int getInt(Scanner scanner) {
+        try {
+            return scanner.nextInt();
+        } finally {
+            scanner.nextLine();
         }
     }
 }
