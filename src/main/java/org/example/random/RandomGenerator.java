@@ -9,10 +9,10 @@ import static org.example.LottoGame.UPPER_BOUND;
 
 public class RandomGenerator {
 
-    public Set<Integer> getRandomNumbers(){
+    public Set<Integer> getRandomNumbers() {
         Random random = new Random();
         Set<Integer> randomNumbers = new LinkedHashSet<>();
-        while (randomNumbers.size() < LOTTO_NR_COUNT){
+        while (randomNumbers.size() < LOTTO_NR_COUNT) {
             int randomNumber = random.nextInt(UPPER_BOUND + 1);
             randomNumbers.add(randomNumber);
         }

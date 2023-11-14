@@ -24,13 +24,11 @@ public class LottoGame {
     private ConsolePrinter consolePrinter;
     private Scanner scanner;
 
-    public void run(){
+    public void run() {
         consolePrinter.printLine(String.format(WELCOME_MSG));
         Set<Integer> userNumbers = inputProvider.getUserNumbers(scanner, consolePrinter);
         Set<Integer> randomNumbers = randomGenerator.getRandomNumbers();
         int hitCount = hitCounter.getHitCount(userNumbers, randomNumbers);
         consolePrinter.printLine(String.format(RESULT_INFO, hitCount, randomNumbers, userNumbers));
     }
-
-
 }

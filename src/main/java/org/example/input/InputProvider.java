@@ -39,6 +39,7 @@ public class InputProvider {
             consolePrinter.printLine(String.format(INVALID_NUMBER, LOWER_BOUND, UPPER_BOUND));
         }
     }
+
     private int getInt(Scanner scanner) {
         try {
             return scanner.nextInt();

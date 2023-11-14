@@ -21,6 +21,7 @@ import java.util.Set;
 import java.util.stream.Stream;
 
 import static org.assertj.core.api.Assertions.*;
+
 @ExtendWith(MockitoExtension.class)
 class InputProviderTest {
     InputProvider inputProvider = new InputProvider();
@@ -29,16 +30,16 @@ class InputProviderTest {
     @DisplayName("Validator and bounds chceck")
     @ParameterizedTest
     @MethodSource("provideTestData")
-    void shouldReturnValidatedUserNumbers(String string){
+    void shouldReturnValidatedUserNumbers(String string) {
         //given
         Scanner scannerMock = mockScannerInput(string);
         //when
         Set<Integer> userNumbers = inputProvider.getUserNumbers(scannerMock, consolePrinter);
         //then
-        assertThat(userNumbers).contains(1,2,3,4,5,6);
+        assertThat(userNumbers).contains(1, 2, 3, 4, 5, 6);
     }
 
-    private static Stream<Arguments> provideTestData(){
+    private static Stream<Arguments> provideTestData() {
         return Stream.of(
                 Arguments.of("1\n 2\n 3\n 4\n 5\n 6\n"),
                 Arguments.of("a\n 1\n b\n 2\n c\n 3\n d\n 4\n e\n 5\n f\n 6\n"),
@@ -46,7 +47,7 @@ class InputProviderTest {
         );
     }
 
-    private Scanner mockScannerInput(String string){
+    private Scanner mockScannerInput(String string) {
         InputStream inputStream = System.in;
         System.setIn(new ByteArrayInputStream(string.getBytes()));
         Scanner scanner = new Scanner(System.in);
