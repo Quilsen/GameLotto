@@ -1,4 +1,4 @@
-package org.example.lottoGame.output;
+package org.example.lottogame.output;
 
 public class ConsolePrinter {
 

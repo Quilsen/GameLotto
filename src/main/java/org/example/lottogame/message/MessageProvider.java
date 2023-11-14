@@ -1,4 +1,4 @@
-package org.example.lottoGame.message;
+package org.example.lottogame.message;
 
 public class MessageProvider {
     public static final String WELCOME_MSG = "Welcome in Lotto Game.";

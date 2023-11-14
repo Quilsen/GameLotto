@@ -1,10 +1,10 @@
 package org.example;
 
-import org.example.lottoGame.LottoGame;
-import org.example.lottoGame.calculator.HitCounter;
-import org.example.lottoGame.input.InputProvider;
-import org.example.lottoGame.output.ConsolePrinter;
-import org.example.lottoGame.random.RandomGenerator;
+import org.example.lottogame.LottoGame;
+import org.example.lottogame.calculator.HitCounter;
+import org.example.lottogame.input.InputProvider;
+import org.example.lottogame.output.ConsolePrinter;
+import org.example.lottogame.random.RandomGenerator;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.jupiter.params.ParameterizedTest;

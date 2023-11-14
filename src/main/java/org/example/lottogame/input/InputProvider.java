@@ -1,14 +1,14 @@
-package org.example.lottoGame.input;
+package org.example.lottogame.input;
 
-import org.example.lottoGame.output.ConsolePrinter;
+import org.example.lottogame.output.ConsolePrinter;
 
 import java.util.InputMismatchException;
 import java.util.LinkedHashSet;
 import java.util.Scanner;
 import java.util.Set;
 
-import static org.example.lottoGame.LottoGame.*;
-import static org.example.lottoGame.message.MessageProvider.*;
+import static org.example.lottogame.LottoGame.*;
+import static org.example.lottogame.message.MessageProvider.*;
 
 public class InputProvider {
 

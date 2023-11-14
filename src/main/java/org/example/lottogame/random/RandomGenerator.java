@@ -1,11 +1,11 @@
-package org.example.lottoGame.random;
+package org.example.lottogame.random;
 
 import java.util.LinkedHashSet;
 import java.util.Random;
 import java.util.Set;
 
-import static org.example.lottoGame.LottoGame.LOTTO_NR_COUNT;
-import static org.example.lottoGame.LottoGame.UPPER_BOUND;
+import static org.example.lottogame.LottoGame.LOTTO_NR_COUNT;
+import static org.example.lottogame.LottoGame.UPPER_BOUND;
 
 public class RandomGenerator {
     private final Random random = new Random();
