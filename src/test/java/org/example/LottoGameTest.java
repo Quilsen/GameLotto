@@ -5,24 +5,26 @@ import org.example.input.InputProvider;
 import org.example.output.ConsolePrinter;
 import org.example.random.RandomGenerator;
 import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
-import org.mockito.*;
+import org.mockito.ArgumentCaptor;
+import org.mockito.Captor;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.util.*;
 import java.util.stream.Stream;
 
-import static org.assertj.core.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
 class LottoGameTest {
-    private HitCounter hitCounter = new HitCounter();
-    private Scanner scanner = new Scanner(System.in);
+    private final HitCounter hitCounter = new HitCounter();
+    private final Scanner scanner = new Scanner(System.in);
     @Mock
     private InputProvider inputProviderMock;
     @Mock
