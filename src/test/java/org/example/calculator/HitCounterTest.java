@@ -21,7 +21,7 @@ class HitCounterTest {
     @DisplayName("Should return matching number count")
     @ParameterizedTest(name = "For this numbers {0}, hitcount should be {1}")
     @MethodSource("provideTestData")
-    void shouldReturnMatchingNumberCount(Set<Integer> userNumbers, int expectedHitCount ) {
+    void shouldReturnMatchingNumberCount(Set<Integer> userNumbers, int expectedHitCount) {
         //given
         Set<Integer> randomNumbers = new HashSet<>(Arrays.asList(1, 2, 3, 4, 5, 6));
         //when
