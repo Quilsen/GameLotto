@@ -38,7 +38,8 @@ class InputProviderTest {
         return Stream.of(
                 Arguments.of("1\n 2\n 3\n 4\n 5\n 6\n"),
                 Arguments.of("a\n 1\n b\n 2\n c\n 3\n d\n 4\n e\n 5\n f\n 6\n"),
-                Arguments.of("50\n 1\n 51\n 2\n 52\n 3\n 53\n 4\n 54\n 5\n 55\n 6\n")
+                Arguments.of("50\n 1\n 51\n 2\n 52\n 3\n 53\n 4\n 54\n 5\n 55\n 6\n"),
+                Arguments.of("50\n 1\n a\n 2\n 52\n 3\n b\n 4\n 54\n 5\n c\n 6\n")
         );
     }
 
