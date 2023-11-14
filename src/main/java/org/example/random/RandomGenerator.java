@@ -8,7 +8,7 @@ import static org.example.LottoGame.LOTTO_NR_COUNT;
 import static org.example.LottoGame.UPPER_BOUND;
 
 public class RandomGenerator {
-    private Random random = new Random();
+    private final Random random = new Random();
 
     public Set<Integer> getRandomNumbers() {
         Set<Integer> randomNumbers = new LinkedHashSet<>();
