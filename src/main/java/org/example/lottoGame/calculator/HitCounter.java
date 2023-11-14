@@ -1,4 +1,4 @@
-package org.example.calculator;
+package org.example.lottoGame.calculator;
 
 import java.util.Set;
 

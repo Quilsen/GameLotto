@@ -1,5 +1,6 @@
 package org.example.calculator;
 
+import org.example.lottoGame.calculator.HitCounter;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.jupiter.params.ParameterizedTest;

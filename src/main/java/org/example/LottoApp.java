@@ -1,11 +1,11 @@
 package org.example;
 
-import org.example.calculator.HitCounter;
-import org.example.input.InputProvider;
-import org.example.output.ConsolePrinter;
-import org.example.random.RandomGenerator;
+import org.example.lottoGame.LottoGame;
+import org.example.lottoGame.calculator.HitCounter;
+import org.example.lottoGame.input.InputProvider;
+import org.example.lottoGame.output.ConsolePrinter;
+import org.example.lottoGame.random.RandomGenerator;
 
-import java.util.Random;
 import java.util.Scanner;
 
 public class LottoApp {

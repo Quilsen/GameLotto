@@ -1,4 +1,4 @@
-package org.example.message;
+package org.example.lottoGame.message;
 
 public class MessageProvider {
     public static final String WELCOME_MSG = "Welcome in Lotto Game.";
@@ -7,4 +7,7 @@ public class MessageProvider {
     public static final String INVALID_NUMBER = "Please, give number from %d to %d.";
     public static final String RESULT_INFO = "You get %d hits. Winning numbers: %s vs Your numbers: %S .";
     public static final String EXCEPITON_INFO = "Please, give NUMBER.";
+    private MessageProvider() {
+        throw new IllegalStateException("Utility class");
+    }
 }

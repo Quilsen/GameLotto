@@ -1,6 +1,7 @@
 package org.example.input;
 
-import org.example.output.ConsolePrinter;
+import org.example.lottoGame.input.InputProvider;
+import org.example.lottoGame.output.ConsolePrinter;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.jupiter.params.ParameterizedTest;

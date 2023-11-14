@@ -1,16 +1,16 @@
-package org.example;
+package org.example.lottoGame;
 
 import lombok.AllArgsConstructor;
-import org.example.calculator.HitCounter;
-import org.example.input.InputProvider;
-import org.example.output.ConsolePrinter;
-import org.example.random.RandomGenerator;
+import org.example.lottoGame.calculator.HitCounter;
+import org.example.lottoGame.input.InputProvider;
+import org.example.lottoGame.output.ConsolePrinter;
+import org.example.lottoGame.random.RandomGenerator;
 
 import java.util.Scanner;
 import java.util.Set;
 
-import static org.example.message.MessageProvider.RESULT_INFO;
-import static org.example.message.MessageProvider.WELCOME_MSG;
+import static org.example.lottoGame.message.MessageProvider.RESULT_INFO;
+import static org.example.lottoGame.message.MessageProvider.WELCOME_MSG;
 
 @AllArgsConstructor
 public class LottoGame {
